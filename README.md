@@ -27,7 +27,6 @@ The benchmark is structured along a logically progressive evaluation chain:
 
 ![Figure 2: IRIS Pipeline](assets/flow-t.svg)
 Figure2: Schematic of the IRIS benchmark evaluation pipeline, illustrating the dual-task and three dimensional assessment, the scoring flow, and the final projection into the high-dimensional “fairness space”.
----
 
 ## 🛠The ARES Classifier
 
