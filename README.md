@@ -26,7 +26,7 @@ The benchmark is structured along a logically progressive evaluation chain:
 - **Bias Inertia & Steerability (BIS)**: Quantifies the controllability of the model's alignment and its resistance to generating counter-stereotypical content.
 
 ![Figure 2: IRIS Pipeline](assets/flow-t.svg)
-Figure2: Schematic of the IRIS benchmark evaluation pipeline, illustrating the dual-task and three dimensional assessment, the scoring flow, and the final projection into the high-dimensional “fairness space”.
+Figure 2: Schematic of the IRIS benchmark evaluation pipeline, illustrating the dual-task and three dimensional assessment, the scoring flow, and the final projection into the high-dimensional “fairness space”.
 
 ## 🛠The ARES Classifier
 
@@ -69,6 +69,7 @@ For example, a **UAF** profile like Bagel's in the Generation task indicates it 
 
 ![Figure 4: IRIS MBTI](assets/icon.svg)
 Figure 4:  The display of the anthropomorphic icons of the eight UMLLM personalities in IRIS-MBTI. As the benchmark is updated in the future, more fairness assessment dimensions will be incorporated and more personality types will be established.
+
 --- 
 
 ## 🤝 Join the Leaderboard
@@ -167,6 +168,6 @@ If you find the IRIS Benchmark useful in your research, please consider citing o
 }
 ```
 
-License
+**License**
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
