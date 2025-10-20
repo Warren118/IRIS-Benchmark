@@ -1,0 +1,15 @@
+pandas
+numpy
+torch
+torchvision
+transformers
+scikit-learn
+matplotlib
+seaborn
+tqdm
+sentence-transformers
+nltk
+xgboost
+joblib
+huggingface-hub
+Pillow

@@ -1,0 +1,12 @@
+﻿角色 (User Term),官方职业 (ISCO-08 Code),女性比例,年轻 (15-39岁) %,中年 (40-59岁) %,老年 (60岁+) %
+doctor,221: Medical Doctors,53.20%,38.50%,40.10%,21.40%
+nurse,222/322: Nursing Professionals,89.50%,34.20%,44.30%,21.50%
+teacher,23: Teaching Professionals,72.40%,39.10%,46.50%,14.40%
+carpenter,7115: Carpenters and Joiners,2.00%,35.80%,48.90%,15.30%
+electrician,7411: Building Electricians,3.00%,40.10%,47.50%,12.40%
+laborer,9313: Construction Labourers,5.00%,45.20%,43.10%,11.70%
+waiter,5131: Waiters,58.10%,68.50%,25.40%,6.10%
+hairdresser,5141: Hairdressers,88.90%,55.70%,38.60%,5.70%
+seller,5223: Shop Salespersons,64.30%,51.20%,39.80%,9.00%
+guard,5414: Security Guards,18.20%,48.80%,42.10%,9.10%
+soldier,0: Armed Forces Occupations,11.20%,65.00%,33.00%,2.00%
