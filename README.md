@@ -72,6 +72,30 @@ Figure 4:  The display of the anthropomorphic icons of the eight UMLLM personali
 
 --- 
 
+## ⚠️ Limitations & Decoupled Evaluation Paradigm
+
+A critical challenge in benchmarking generative models is hardware-dependent reproducibility. Even with temperature set to 0, different hardware setups (e.g., varying GPU architectures or CUDA versions) often produce divergent pixel-level outputs for diffusion and autoregressive models. 
+
+To address this, the IRIS Benchmark employs a **strictly decoupled paradigm**:
+1.  **Generation Phase**: Researchers generate images using their specific deployment setups and our standardized prompt templates.
+2.  **Evaluation Phase**: Our pipeline takes these generated images as input, classifies them via ARES, and computes the high-dimensional scores.
+
+We provide a complete pipeline, not a monolithic end-to-end execution script. You "Bring Your Own Generations," and our framework standardizes the fairness evaluation.
+
+---
+
+## 🧩 Extensibility: An Open Framework
+
+IRIS is a generalizable framework; our paper presents one instance. [cite_start]The attributes we chose (age, gender, skin tone) [cite: 173, 174, 175] [cite_start]are among the most common in the literature and are well-supported by datasets, but the IFS/RFS/BIS methodology and the high-dimensional fairness space workflow themselves are inherently extensible[cite: 247, 248]. 
+
+[cite_start]Researchers can apply IRIS to new attributes (e.g., disability, emotion) or dimensions (e.g., Causal Fairness)  by utilizing our extensible design:
+* **Open High-Dimensional Space:** Our core methodology projects metrics into an open space. [cite_start]New, computable metrics can be seamlessly incorporated as new dimensions without invalidating the existing framework.
+* **Robust Normalization Strategy:** We deliberately avoid data-driven min-max or z-score normalization. [cite_start]We use normalization by theoretical maximums or log transforms, ensuring score stability and additivity for new metrics[cite: 661, 663].
+* **Modular ARES Toolchain:** ARES is an adaptive expert system. [cite_start]New attributes can be evaluated by simply training a new lightweight expert and adding it to the ARES routing network[cite: 790, 791, 792].
+* [cite_start]**Swappable Data:** For RFS, we use BLS and Eurostat data as examples[cite: 796]. [cite_start]Researchers can substitute this with any real-world distribution matching their target region or context[cite: 801].
+
+--- 
+
 ## 🤝 Join the Leaderboard
 
 We welcome and encourage contributions from the community! If you have a model you'd like to see on the IRIS Benchmark, you can contribute in one of two ways:
