@@ -1,5 +1,9 @@
 # IRIS Benchmark: Fair in Mind, Fair in Action?
 
+[![Paper](https://img.shields.io/badge/Paper-OpenReview-b31b1b.svg)](https://openreview.net/pdf?id=NYphgYTloq)
+[![Website](https://img.shields.io/badge/Website-Leaderboard-blue.svg)](https://iris-benchmark-web.vercel.app/)
+[![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-ffd21e.svg)](https://huggingface.co/datasets/warrenlvlmgo/IRIS_Benchmark_Dataset)
+
 **A Synchronous Benchmark for Understanding and Generation in Unified Multimodal Large Language Models (UMLLMs)**
 
 This repository contains the official implementation for the IRIS Benchmark. We introduce a novel framework designed to synchronously evaluate the fairness of both understanding and generation capabilities in UMLLMs, addressing the "Babel Tower" dilemma in AI fairness evaluation.
@@ -86,13 +90,13 @@ We provide a complete pipeline, not a monolithic end-to-end execution script. Yo
 
 ## 🧩 Extensibility: An Open Framework
 
-IRIS is a generalizable framework; our paper presents one instance. [cite_start]The attributes we chose (age, gender, skin tone) [cite: 173, 174, 175] [cite_start]are among the most common in the literature and are well-supported by datasets, but the IFS/RFS/BIS methodology and the high-dimensional fairness space workflow themselves are inherently extensible[cite: 247, 248]. 
+IRIS is a generalizable framework; our paper presents one instance. The attributes we chose (age, gender, skin tone) are among the most common in the literature and are well-supported by datasets, but the IFS/RFS/BIS methodology and the high-dimensional fairness space workflow themselves are inherently extensible. 
 
-[cite_start]Researchers can apply IRIS to new attributes (e.g., disability, emotion) or dimensions (e.g., Causal Fairness)  by utilizing our extensible design:
-* **Open High-Dimensional Space:** Our core methodology projects metrics into an open space. [cite_start]New, computable metrics can be seamlessly incorporated as new dimensions without invalidating the existing framework.
-* **Robust Normalization Strategy:** We deliberately avoid data-driven min-max or z-score normalization. [cite_start]We use normalization by theoretical maximums or log transforms, ensuring score stability and additivity for new metrics[cite: 661, 663].
-* **Modular ARES Toolchain:** ARES is an adaptive expert system. [cite_start]New attributes can be evaluated by simply training a new lightweight expert and adding it to the ARES routing network[cite: 790, 791, 792].
-* [cite_start]**Swappable Data:** For RFS, we use BLS and Eurostat data as examples[cite: 796]. [cite_start]Researchers can substitute this with any real-world distribution matching their target region or context[cite: 801].
+Researchers can apply IRIS to new attributes (e.g., disability, emotion) or dimensions (e.g., Causal Fairness)  by utilizing our extensible design:
+* **Open High-Dimensional Space:** Our core methodology projects metrics into an open space. New, computable metrics can be seamlessly incorporated as new dimensions without invalidating the existing framework.
+* **Robust Normalization Strategy:** We deliberately avoid data-driven min-max or z-score normalization. We use normalization by theoretical maximums or log transforms, ensuring score stability and additivity for new metrics.
+* **Modular ARES Toolchain:** ARES is an adaptive expert system. New attributes can be evaluated by simply training a new lightweight expert and adding it to the ARES routing network.
+* **Swappable Data:** For RFS, we use BLS and Eurostat data as examples. Researchers can substitute this with any real-world distribution matching their target region or context.
 
 --- 
 
@@ -184,14 +188,23 @@ All final reports will be saved in the `results/final_evaluation/` directory.
 If you find the IRIS Benchmark useful in your research, please consider citing our paper:
 
 ```latex
-@article{zhao2025iris,
-  title={Fair in Mind, Fair in Action? A Synchronous Benchmark for Understanding and Generation in UMLLMs},
-  author={Yiran Zhao and Lu Zhou and Xiaogang Xu and Jiafei Wu and Liming Fang and Zhe Liu},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2025}
+@inproceedings{
+zhao2026fair,
+title={Fair in Mind, Fair in Action? A Synchronous Benchmark for Understanding and Generation in {UMLLM}s},
+author={Yiran Zhao and Lu Zhou and Xiaogang Xu and Liming Fang and Zhe Liu and Jiafei Wu},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=NYphgYTloq}
 }
 ```
 
+---
+
+## 📜 Ethics Statement
+While synthetic data reduces privacy risks, generative models may still reproduce social stereotypes, and our automated ARES annotator may introduce measurement noise and potential classifier bias. We emphasize that demographic labels are proxies and IRIS is intended strictly for diagnostic research, not for surveillance or profiling.
+
+---
+
 **License**
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License.
